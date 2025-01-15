@@ -13,7 +13,11 @@ export const footballApi = createApi({
     }),
     endpoints: (builder) => ({
         getAreas: builder.query<Area[], void>({
-            query: () => '/areas',
+            query: (payload) => ({
+                url: "/areas",
+                method: 'GET',
+                body: payload
+            }),
         }),
     }),
 });
