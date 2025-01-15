@@ -1,0 +1,9 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+}
+.navbar button {
+    border: 1px solid rgb(110, 110, 110);
+    border-radius: 5px;
+    padding: 5px;
+}

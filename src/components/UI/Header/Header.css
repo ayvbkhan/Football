@@ -1,0 +1,13 @@
+header div {
+    padding: 10px;
+    background: #004044;
+    color: #fff;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    align-items: center;
+}
+
+header h1 {
+    margin-left: 15px;
+}
