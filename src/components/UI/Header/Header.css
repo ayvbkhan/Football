@@ -1,13 +1,17 @@
-header div {
-    padding: 10px;
-    background: #004044;
+.headerContainer {
     color: #fff;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
+    display: flex;
+    justify-content: space-between;
     gap: 10px;
     align-items: center;
 }
 
+header {
+    background: #004044;
+    padding: 10px;
+}
+
 header h1 {
     margin-left: 15px;
+    font-size: 50px;
 }

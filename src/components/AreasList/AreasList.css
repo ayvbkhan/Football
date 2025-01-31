@@ -1,0 +1,13 @@
+.areaItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+.areaItem:hover {
+    cursor: pointer;
+    color: rgb(97, 97, 97);
+}

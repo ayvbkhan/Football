@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "../../components/UI";
 import { Input } from "../../components/UI/";
+import './Registration.css'
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -31,7 +32,8 @@ const { control, handleSubmit, formState: { errors } } = useForm({
     }
 
     return (
-        <div style={{ padding: '20px', textAlign: 'center' }}>
+        <div className="loginContainer">
+            <div className="formContainer">
             <h2>Регистрация</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <Controller
@@ -71,11 +73,12 @@ const { control, handleSubmit, formState: { errors } } = useForm({
             </form>
             <div>
             <span>Уже есть аккаунт? </span>
-                <Link to="/login">Войти</Link>
+                <Link to="/">Войти</Link>
             </div>
             <div>
                 <a href="#">Забыли пароль?</a>
             </div>
+        </div>
         </div>
     );
 };

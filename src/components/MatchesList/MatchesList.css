@@ -1,0 +1,84 @@
+.matches-list-container {
+    margin: 20px;
+}
+
+.matches-list-container h2 {
+    font-size: 30px;
+    color: #004044;
+}
+
+.matches-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.match-item:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+.match-item:nth-child(even) {
+    background-color: #dcdcdc;
+}
+
+.match-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    width: 600px;
+}
+
+.match-item:hover {
+    background-color: #ccc;
+}
+
+.match-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.team-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.team-name {
+    font-weight: bold;
+}
+
+.match-date {
+    font-size: 14px;
+    color: #555;
+}
+
+.match-score {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.winner-info {
+    margin-top: 5px;
+    font-style: italic;
+    color: #007bff;
+}
+
+.favorite-button {
+    background-color: #22a1aa;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.favorite-button:hover {
+    background-color: #6bb6bb;
+}
+
+.cardButton {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}

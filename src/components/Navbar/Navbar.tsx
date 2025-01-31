@@ -4,17 +4,21 @@ import './Navbar.css'
 import { NavbarData } from './NavbarData'
 
 export const Navbar = () => {
-  return (
-      <div className='navbar'>
-          {NavbarData.map((sport) => (
-              sport === "Главная страница" ? (
-                  <Link to="/" key={sport}>
-                      <Button type='button' text={sport} />
-                  </Link>
-              ) : (
-                  <Button key={sport} type='button' text={sport} />
-              )
-          ))}
-      </div>
-  )
+    return (
+        <div className='navbar'>
+            {NavbarData.map((item) => (
+                item === "Избранное" ? (
+                    <Link to="/favourite" key={item}>
+                        <Button type='button' text={item} />
+                    </Link>
+                ) : item === "Главная страница" ? (
+                    <Link to="/main" key={item}>
+                        <Button type='button' text={item} />
+                    </Link>
+                ) : (
+                    <Button key={item} type='button' text={item} />
+                )
+            ))}
+        </div>
+    )
 }

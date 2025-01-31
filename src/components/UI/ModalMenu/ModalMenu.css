@@ -1,0 +1,40 @@
+.stylesbutton {
+    background-color: #185f64;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.stylesbutton:hover {
+    background-color: #539397;
+}
+
+.stylesmodalContent {
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stylesteamLogo {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.stylesteamTitle {
+   display: flex;
+justify-content: space-between;
+margin-bottom: 15px;
+}
+
+.stylesdescription {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

@@ -1,9 +1,11 @@
 .navbar {
     display: flex;
     flex-direction: row;
+    gap: 10px;
 }
 .navbar button {
     border: 1px solid rgb(110, 110, 110);
     border-radius: 5px;
     padding: 5px;
+    font-size: 18px;
 }

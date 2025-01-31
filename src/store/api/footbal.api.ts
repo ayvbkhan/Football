@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { baseUrl, API_KEY } from '../../utils/baseUrl'
-import type { Area } from './types';
+import type { AreasResponse, CompetitionResponse, MatchResponse } from './types';
 
 export const footballApi = createApi({
     reducerPath: 'footballApi',
@@ -12,14 +12,25 @@ export const footballApi = createApi({
         },
     }),
     endpoints: (builder) => ({
-        getAreas: builder.query<Area[], void>({
-            query: (payload) => ({
+        getAreas: builder.query<AreasResponse, void>({
+            query: () => ({
                 url: "/areas",
+                method: 'GET'
+            }),
+        }),
+        getCompetitions: builder.query<CompetitionResponse, void>({
+            query: () => ({
+                url: '/competitions',
                 method: 'GET',
-                body: payload
+            }),
+        }),
+        getMatches: builder.query<MatchResponse, number>({
+            query: (teamId) => ({
+                url: `/teams/${teamId}/matches`,
+                method: 'GET',
             }),
         }),
     }),
 });
 
-export const { useGetAreasQuery } = footballApi;
+export const { useGetAreasQuery, useGetCompetitionsQuery, useGetMatchesQuery } = footballApi;

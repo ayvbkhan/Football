@@ -1,23 +1,20 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Footer, Header } from './components/UI'
 import { Login } from './pages/LoginPage/LoginPage'
 import { Main } from './pages/Main/Main'
-import { Profile } from './pages/Profile/Profile'
+import { Favourite } from './pages/Favourite/Favourite'
 import { Registration } from './pages/Registration/Registration'
 
 function App() {
   return (
     <>
       <Router>
-        <Header />
         <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/login" element={<Login />} />
+          <Route path="/main" element={<Main />} />
+          <Route path="/" element={<Login />} />
           <Route path="/registration" element={<Registration />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/favourite" element={<Favourite />} />
         </Routes>
-        <Footer />
       </Router>
     </>
   )
