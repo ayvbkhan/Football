@@ -15,19 +15,22 @@ export const footballApi = createApi({
         getAreas: builder.query<AreasResponse, void>({
             query: () => ({
                 url: "/areas",
-                method: 'GET'
+                method: 'GET',
+                mode: 'no-cors'
             }),
         }),
         getCompetitions: builder.query<CompetitionResponse, void>({
             query: () => ({
                 url: '/competitions',
                 method: 'GET',
+                mode: 'no-cors'
             }),
         }),
         getMatches: builder.query<MatchResponse, number>({
             query: (teamId) => ({
                 url: `/teams/${teamId}/matches`,
                 method: 'GET',
+                mode: 'no-cors'
             }),
         }),
     }),
