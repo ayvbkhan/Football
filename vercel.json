@@ -7,7 +7,7 @@
     ],
     "headers": [
         {
-            "source": "/api/(.*)",
+            "source": "src/store/api/(.*)",
             "headers": [
                 {
                     "key": "Access-Control-Allow-Credentials",
