@@ -4,11 +4,5 @@
             "source": "/(.*)",
             "destination": "/"
         }
-    ],
-    "routes": [
-        {
-            "src": "/api/proxy",
-            "dest": "/api/proxy.ts"
-        }
     ]
 }

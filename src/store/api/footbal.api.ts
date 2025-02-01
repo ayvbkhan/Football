@@ -1,34 +1,33 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { baseUrl, API_KEY } from '../../utils/baseUrl'
 import type { AreasResponse, CompetitionResponse, MatchResponse } from './types';
 
 export const footballApi = createApi({
     reducerPath: 'footballApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: '/api/proxy', // Используем прокси-роут
+        baseUrl: baseUrl,
+        prepareHeaders: (headers) => {
+            headers.set('X-Auth-Token', API_KEY); 
+            return headers;
+        },
     }),
     endpoints: (builder) => ({
         getAreas: builder.query<AreasResponse, void>({
             query: () => ({
-                url: '',
-                params: {
-                    path: 'areas'
-                }
+                url: "/areas",
+                method: 'GET'
             }),
         }),
         getCompetitions: builder.query<CompetitionResponse, void>({
             query: () => ({
-                url: '',
-                params: {
-                    path: 'competitions'
-                }
+                url: '/competitions',
+                method: 'GET'
             }),
         }),
         getMatches: builder.query<MatchResponse, number>({
             query: (teamId) => ({
-                url: '',
-                params: {
-                    path: `teams/${teamId}/matches`
-                }
+                url: `/teams/${teamId}/matches`,
+                method: 'GET'
             }),
         }),
     }),
