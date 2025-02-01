@@ -15,7 +15,10 @@ export const footballApi = createApi({
         getAreas: builder.query<AreasResponse, void>({
             query: () => ({
                 url: "/areas",
-                method: 'GET'
+                method: 'GET',
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                }
             }),
         }),
         getCompetitions: builder.query<CompetitionResponse, void>({
