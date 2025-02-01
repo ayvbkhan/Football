@@ -1,19 +1,8 @@
 {
     "rewrites": [
         {
-            "source": "/api/football-data/:path*", 
-            "destination": "https://api.football-data.org/v4/:path*"
-        }
-    ],
-    "headers": [
-        {
-            "source": "/api/football-data/(.*)", 
-            "headers": [
-                {
-                    "key": "Access-Control-Allow-Origin", 
-                    "value": "*" 
-                }
-            ]
+            "source": "/(.*)",
+            "destination": "/"
         }
     ]
 }
